@@ -5,9 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ObjetoDeValor\" />
-    <Folder Include="Entidades\" />
     <Folder Include="Enumerados\" />
+    <Folder Include="ObjetoDeValor\" />
     <Folder Include="Contratos\" />
   </ItemGroup>
 
