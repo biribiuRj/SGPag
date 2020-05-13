@@ -4,10 +4,11 @@ using System.Text;
 
 namespace SGPag.Dominio.Entidades
 {
-    public class DadosContratos
+    public class DadosContrato
     {
         public int Id { get; set; }
-        public Contratos ContratoId { get; set; }
+        public virtual Fornecedor CodeEscAux { get; set; }
+        public virtual Contrato ContratoId { get; set; }
         public int ValorFixo { get; set; }
         public int VolumeFixo { get; set; }
         public int QntProcCap { get; set; }

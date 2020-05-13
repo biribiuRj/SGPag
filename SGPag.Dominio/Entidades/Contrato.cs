@@ -5,11 +5,11 @@ using System.Text;
 
 namespace SGPag.Dominio.Entidades
 {
-    public class Contratos
+    public class Contrato
     {
         public int Id { get; set; }
-        public Fornecedores FornecedorId { get; set; }
-        public Fornecedores CodeEscAux { get; set; }
+        public virtual Fornecedore FornecedorId { get; set; }
+        public virtual Fornecedore CodeEscAux { get; set; }
         public string Aditivo { get; set; }
         public string Controle_aditivos { get; set; }
         public string Sgpag_ant { get; set; }
@@ -20,21 +20,21 @@ namespace SGPag.Dominio.Entidades
         public int Objeto { get; set; }
         public string Enviado { get; set; }
         public DateTime Validado_em { get; set; }
-        public Usuarios User_validado { get; set; }
+        public Usuario User_validado { get; set; }
         public string Anexo_contrato { get; set; }
         public string Num_aditivo { get; set; }
         public string Fixo { get; set; }
         public string Variavel { get; set; }
         public string Proposta { get; set; }
         public string Ativo { get; set; }
-        public Empresas Empre { get; set; }
+        public Empresa Empre { get; set; }
         public string Are { get; set; }
         public Estados Estad { get; set; }
         public string Cid { get; set; }
         public string Obs { get; set; }
         public string Just { get; set; }
-        public Usuarios User_cadastro { get; set; }
-        public Usuarios User_alteracao { get; set; }
+        public Usuario User_cadastro { get; set; }
+        public Usuario User_alteracao { get; set; }
         public DateTime Updated_at { get; set; }
         public DateTime Dt_protocolo { get; set; }
         public DateTime Dt_validacao { get; set; }

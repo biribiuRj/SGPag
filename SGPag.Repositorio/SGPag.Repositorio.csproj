@@ -5,9 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositorios\" />
     <Folder Include="Contexto\" />
     <Folder Include="Config\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SGPag.Dominio\SGPag.Dominio.csproj" />
   </ItemGroup>
 
 </Project>
