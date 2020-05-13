@@ -27,6 +27,18 @@ namespace SGPag.Dominio.Entidades
         public virtual Usuario UsuarioId { get; set; }
         public string Terouraria { get; set; }
         public string Ativo { get; set; }
+        public string NomeSocio1 { get; set; }
+        public string TelefoneSocio1 { get; set; }
+        public string EmailSocio1 { get; set; }
+        public string NomeSocio2 { get; set; }
+        public string TelefoneSocio2 { get; set; }
+        public string EmailSocio2 { get; set; }
+        public string NomeFinanceiro1 { get; set; }
+        public string TelefoneFinanceiro1 { get; set; }
+        public string EmailFinanceiro1 { get; set; }
+        public string NomeFinanceiro2 { get; set; }
+        public string TelefoneFinanceiro2 { get; set; }
+        public string EmailFinanceiro2 { get; set; }
         public virtual ICollection<Contrato>Contratos { get; set; }
 
     }

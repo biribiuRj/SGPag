@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Entidades\DadosContrato.cs" />
+    <Compile Remove="Entidades\Stakeholder.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Enumerados\" />
     <Folder Include="ObjetoDeValor\" />
   </ItemGroup>

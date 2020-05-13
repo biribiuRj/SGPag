@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SGPag.Dominio.Enumerados
+namespace SGPag.Dominio.Entidades
 {
     public class Estado
     {
