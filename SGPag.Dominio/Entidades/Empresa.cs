@@ -9,7 +9,8 @@ namespace SGPag.Dominio.Entidades
         public int Id { get; set; }
         public string EmpresaCurto { get; set; }
         public string EmpresaLongo { get; set; }
-        public string EmpresaAtivo { get; set; }
-        public virtual ICollection<Contrato> Contratos { get; set; }
+        public int EmpresaAtivo { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
     }
 }

@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Config\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\SGPag.Dominio\SGPag.Dominio.csproj" />
   </ItemGroup>
 

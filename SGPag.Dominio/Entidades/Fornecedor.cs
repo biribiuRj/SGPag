@@ -1,12 +1,10 @@
-﻿using SGPag.Dominio.Enumerados;
-using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System;
 
 namespace SGPag.Dominio.Entidades
 {
     public class Fornecedor
     {
+        public int Id { get; set; }
         public string NomeSap { get; set; }
         public string NomeCnpj { get; set; }
         public string Identidade { get; set; }
@@ -19,12 +17,14 @@ namespace SGPag.Dominio.Entidades
         public string Numero { get; set; }
         public string Complemento { get; set; }
         public string Bairro { get; set; }
-        public virtual Estado EstadoId { get; set; }
+        public int EstadoId { get; set; }
+        public virtual Estado Estado { get; set; }
         public string Cidade { get; set; }
         public string CEP { get; set; }
         public string Pais { get; set; }
         public string Telefone { get; set; }
-        public virtual Usuario UsuarioId { get; set; }
+        public int UsuarioId { get; set; }
+        public virtual Usuario Usuario { get; set; }
         public string Terouraria { get; set; }
         public string Ativo { get; set; }
         public string NomeSocio1 { get; set; }
@@ -39,7 +39,8 @@ namespace SGPag.Dominio.Entidades
         public string NomeFinanceiro2 { get; set; }
         public string TelefoneFinanceiro2 { get; set; }
         public string EmailFinanceiro2 { get; set; }
-        public virtual ICollection<Contrato>Contratos { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
 
     }
 }
