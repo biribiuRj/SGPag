@@ -1,39 +1,47 @@
 ﻿using SGPag.Dominio.Contratos;
+using SGPag.Repositorio.Contexto;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 using System.Text;
 
 namespace SGPag.Repositorio.Repositorios
 {
-    class BaseRepositorio<TEntity> : IBaseRepositorio<TEntity> where TEntity : class
+    public class BaseRepositorio<TEntity> : IBaseRepositorio<TEntity> where TEntity : class
     {
-        public BaseRepositorio()
+        protected readonly SGPagContexto SGPagContexto;
+
+        public BaseRepositorio(SGPagContexto sGPagContexto)
         {
+            SGPagContexto = sGPagContexto;
         }
         public void Adicionar(TEntity entity)
         {
-            throw new NotImplementedException();
+            SGPagContexto.Set<TEntity>().Add(entity);
+            SGPagContexto.SaveChanges();
         }
         public void Atualizar(TEntity entity)
         {
-            throw new NotImplementedException();
+            SGPagContexto.Set<TEntity>().Update(entity);
+            SGPagContexto.SaveChanges();
         }
         public TEntity ObterPorId(int id)
         {
-            throw new NotImplementedException();
+            return SGPagContexto.Set<TEntity>().Find(id);
         }
         public IEnumerable<TEntity> ObterTodos()
         {
-            throw new NotImplementedException();
+            return SGPagContexto.Set<TEntity>().ToList() ;
         }
         public void Remover(TEntity entity)
         {
-            throw new NotImplementedException();
+            SGPagContexto.Remove(entity);
+            SGPagContexto.SaveChanges();
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            SGPagContexto.Dispose();
         }
     }
 }

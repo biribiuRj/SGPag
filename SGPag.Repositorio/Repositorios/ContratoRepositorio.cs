@@ -7,9 +7,9 @@ using SGPag.Repositorio.Contexto;
 
 namespace SGPag.Repositorio.Repositorios
 {
-    public class EmpresaRepositorio : BaseRepositorio<Empresa>, IEmpresaRepositorio
+    public class ContratoRepositorio : BaseRepositorio<Contrato>, IContratoRepositorio
     {
-        public EmpresaRepositorio(SGPagContexto sGPagContexto) : base(sGPagContexto)
+        public ContratoRepositorio(SGPagContexto sGPagContexto) : base(sGPagContexto)
         {
         }
     }

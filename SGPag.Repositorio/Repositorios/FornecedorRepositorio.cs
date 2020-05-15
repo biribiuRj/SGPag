@@ -3,14 +3,14 @@ using SGPag.Dominio.Contratos;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using SGPag.Repositorio.Contexto;
 
 namespace SGPag.Repositorio.Repositorios
 {
-    class FornecedorRepositorio : BaseRepositorio<Fornecedor>, IFornecedorRepositorio
+    public class FornecedorRepositorio : BaseRepositorio<Fornecedor>, IFornecedorRepositorio
     {
-        public FornecedorRepositorio()
+        public FornecedorRepositorio(SGPagContexto sGPagContexto) : base(sGPagContexto)
         {
-
         }
     }
 }

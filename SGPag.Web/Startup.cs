@@ -7,6 +7,8 @@ using Microsoft.Extensions.Configuration;
 using SGPag.Repositorio.Contexto;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using SGPag.Dominio.Contratos;
+using SGPag.Repositorio.Repositorios;
 
 namespace SGPag.Web
 {
@@ -28,8 +30,12 @@ namespace SGPag.Web
             services.AddDbContext<SGPagContexto>(option => option.UseLazyLoadingProxies().UseMySql(connectionString, m => m.MigrationsAssembly("SGPag.Repositorio")));
             
             //scoped
-            //services.AddScoped<IPedidosRepositorio, PedidoRepositorio>();
-            
+            services.AddScoped<IAreaRepositorio, AreaRepositorio>();
+            services.AddScoped<IContratoRepositorio, ContratoRepositorio>();
+            services.AddScoped<IEmpresaRepositorio, EmpresaRepositorio>();
+            services.AddScoped<IFornecedorRepositorio, FornecedorRepositorio>();
+            services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

@@ -1,12 +1,11 @@
 ﻿using SGPag.Dominio.Entidades;
-using SGPag.Dominio.Contratos;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SGPag.Repositorio.Repositorios
+namespace SGPag.Dominio.Contratos
 {
-    class DadosContratosRepositorio
+    public interface IContratoRepositorio : IBaseRepositorio<Contrato>
     {
     }
 }
