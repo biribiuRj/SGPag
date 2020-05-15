@@ -17,13 +17,6 @@ namespace SGPag.Repositorio.Config
                     .Property(e => e.NomeEstado)
                     .IsRequired()
                     .HasMaxLength(30);
-            builder
-                    .Property(e => e.CreatedAt)
-                    .HasColumnType("datetime");
-            builder
-                    .Property(e => e.UpdatedAt)
-                    .HasColumnType("datetime");
-
         }
     }
 }

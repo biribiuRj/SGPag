@@ -10,7 +10,5 @@ namespace SGPag.Dominio.Entidades
         public string EmpresaCurto { get; set; }
         public string EmpresaLongo { get; set; }
         public int EmpresaAtivo { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
     }
 }

@@ -1,0 +1,35 @@
+export class Fornecedor {
+  id: number;
+  nomeSap: string;
+  nomecnpj: string;
+  identidade: string;
+  email: string;
+  tipoPessoa: string;
+  cpfCnpj: string;
+  codSap: number;
+  inscMunicipal: string;
+  logradouro: string;
+  numero: string;
+  complemento: string;
+  bairro: string;
+  estadoId: number;
+  cidade: string;
+  cep: string;
+  pais: string;
+  telefone: string;
+  usuarioId: number;
+  terouraria: string;
+  ativo: string;
+  nomeSocio1: string;
+  telefoneSocio1: string;
+  emailSocio1: string;
+  nomeSocio2: string;
+  telefoneSocio2: string;
+  emailSocio2: string;
+  nomeFinanceiro1: string;
+  telefoneFinanceiro1: string;
+  emailFinanceiro1: string;
+  nomeFinanceiro2: string;
+  telefoneFinanceiro2: string;
+  emailFinanceiro2: string;
+}

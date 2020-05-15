@@ -8,7 +8,5 @@ namespace SGPag.Dominio.Entidades
         public string AreaCurto { get; set; }
         public string AreaLongo { get; set; }
         public int AreaAtivo { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
     }
 }

@@ -26,7 +26,35 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\modelo\area.ts" />
+    <None Remove="ClientApp\src\app\modelo\contrato.ts" />
+    <None Remove="ClientApp\src\app\modelo\empresa.ts" />
+    <None Remove="ClientApp\src\app\modelo\estado.ts" />
+    <None Remove="ClientApp\src\app\modelo\fornecedor.ts" />
+    <None Remove="ClientApp\src\app\modelo\usuario.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SGPag.Repositorio\SGPag.Repositorio.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\usuario.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\fornecedor.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\estado.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\empresa.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\contrato.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\modelo\area.ts" />
   </ItemGroup>
 
   <ItemGroup>

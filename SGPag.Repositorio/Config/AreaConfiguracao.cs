@@ -21,12 +21,6 @@ namespace SGPag.Repositorio.Config
                     .Property(a => a.AreaAtivo)
                     .IsRequired()
                     .HasColumnType("int");
-            builder
-                    .Property(e => e.CreatedAt)
-                    .HasColumnType("datetime");
-            builder
-                    .Property(e => e.UpdatedAt)
-                    .HasColumnType("datetime");
         }
     }
 }

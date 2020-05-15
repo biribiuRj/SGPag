@@ -9,15 +9,13 @@ namespace SGPag.Dominio.Entidades
         public virtual Fornecedor Fornecedor { get; set; }
         public int CodeEscAuxId { get; set; }
         public string Aditivo { get; set; }
-        public string Controle_aditivos { get; set; }
-        public string Sgpag_ant { get; set; }
-        public int Assinatura { get; set; }
+        public string ControleAditivos { get; set; }
+        public string SgpagAnt { get; set; }
+        public DateTime Assinatura { get; set; }
         public int VigIndeterminada { get; set; }
         public DateTime VigInicial { get; set; }
         public DateTime VigFinal { get; set; }
         public int Objeto { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
 
     }
 }

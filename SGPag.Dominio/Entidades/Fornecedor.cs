@@ -41,8 +41,5 @@ namespace SGPag.Dominio.Entidades
         public string TelefoneFinanceiro2 { get; set; }
         public string EmailFinanceiro2 { get; set; }
         public virtual ICollection<Contrato> Contratos { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
-
     }
 }

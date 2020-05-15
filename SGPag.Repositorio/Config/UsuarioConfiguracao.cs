@@ -21,12 +21,6 @@ namespace SGPag.Repositorio.Config
                     .Property(u => u.Email)
                     .IsRequired()
                     .HasMaxLength(30);
-            builder
-                    .Property(e => e.CreatedAt)
-                    .HasColumnType("datetime");
-            builder
-                    .Property(e => e.UpdatedAt)
-                    .HasColumnType("datetime");
         }
     }
 }

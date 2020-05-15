@@ -11,7 +11,5 @@ namespace SGPag.Dominio.Entidades
         public string User { get; set; }
         public string Email { get; set; }
         public virtual ICollection<Fornecedor> Fornecedores { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
     }
 }
