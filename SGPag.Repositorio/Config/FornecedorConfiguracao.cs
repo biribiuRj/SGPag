@@ -9,6 +9,10 @@ namespace SGPag.Repositorio.Config
         public void Configure(EntityTypeBuilder<Fornecedor> builder)
         {
             builder.HasKey(f => f.Id);
+
+            builder
+                .HasMany(c => c.Contratos)
+                .WithOne(f => f.Fornecedor);
         }
     }
 }
