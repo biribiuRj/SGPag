@@ -26,12 +26,34 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\area\area.component.css" />
+    <None Remove="ClientApp\src\app\area\area.component.html" />
+    <None Remove="ClientApp\src\app\area\area.component.ts" />
+    <None Remove="ClientApp\src\app\empresa\empresa.component.css" />
+    <None Remove="ClientApp\src\app\empresa\empresa.component.html" />
+    <None Remove="ClientApp\src\app\empresa\empresa.component.ts" />
+    <None Remove="ClientApp\src\app\estado\estado.component.css" />
+    <None Remove="ClientApp\src\app\estado\estado.component.html" />
+    <None Remove="ClientApp\src\app\estado\estado.component.ts" />
+    <None Remove="ClientApp\src\app\fornecedor\fornecedor.component.css" />
+    <None Remove="ClientApp\src\app\fornecedor\fornecedor.component.html" />
+    <None Remove="ClientApp\src\app\fornecedor\fornecedor.component.ts" />
+    <None Remove="ClientApp\src\app\fornecedor\manutencao\fornecedor.manutencao.component.css" />
+    <None Remove="ClientApp\src\app\fornecedor\manutencao\fornecedor.manutencao.component.html" />
+    <None Remove="ClientApp\src\app\fornecedor\manutencao\fornecedor.manutencao.component.ts" />
     <None Remove="ClientApp\src\app\modelo\area.ts" />
     <None Remove="ClientApp\src\app\modelo\contrato.ts" />
     <None Remove="ClientApp\src\app\modelo\empresa.ts" />
     <None Remove="ClientApp\src\app\modelo\estado.ts" />
     <None Remove="ClientApp\src\app\modelo\fornecedor.ts" />
     <None Remove="ClientApp\src\app\modelo\usuario.ts" />
+    <None Remove="ClientApp\src\app\servicos\usuario\servico.usuario.ts" />
+    <None Remove="ClientApp\src\app\usuario\login\usuario.login.component.css" />
+    <None Remove="ClientApp\src\app\usuario\login\usuario.login.component.html" />
+    <None Remove="ClientApp\src\app\usuario\login\usuario.login.component.ts" />
+    <None Remove="ClientApp\src\app\usuario\manutencao\usuario.manutencao.component.css" />
+    <None Remove="ClientApp\src\app\usuario\manutencao\usuario.manutencao.component.html" />
+    <None Remove="ClientApp\src\app\usuario\manutencao\usuario.manutencao.component.ts" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,6 +61,42 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\area\area.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\area\area.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\area\area.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\empresa\empresa.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\empresa\empresa.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\empresa\empresa.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\estado\estado.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\estado\estado.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\estado\estado.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\fornecedor\fornecedor.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\fornecedor\fornecedor.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\fornecedor\fornecedor.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\modelo\usuario.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
@@ -55,6 +113,34 @@
       <SubType>Code</SubType>
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\modelo\area.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\fornecedor\manutencao\fornecedor.manutencao.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\fornecedor\manutencao\fornecedor.manutencao.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\fornecedor\manutencao\fornecedor.manutencao.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\servicos\usuario\servico.usuario.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\login\usuario.login.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\login\usuario.login.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\login\usuario.login.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\manutencao\usuario.manutencao.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\manutencao\usuario.manutencao.component.html">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\manutencao\usuario.manutencao.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
   </ItemGroup>
 
   <ItemGroup>

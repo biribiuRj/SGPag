@@ -1,9 +1,9 @@
 <header>
   <nav class='navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3'>
     <div class="container">
-      <a class="navbar-brand" [routerLink]='["/"]'>SGPag.Web</a>
+      <a class="navbar-brand" [routerLink]='["/"]'>SGPag</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation"
-        [attr.aria-expanded]="isExpanded" (click)="toggle()">
+              [attr.aria-expanded]="isExpanded" (click)="toggle()">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" [ngClass]='{"show": isExpanded}'>
@@ -12,10 +12,28 @@
             <a class="nav-link text-dark" [routerLink]='["/"]'>Home</a>
           </li>
           <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/counter"]'>Counter</a>
+            <a class="nav-link text-dark" [routerLink]='["/pesquisar-produto"]'>Usuários</a>
           </li>
           <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/fetch-data"]'>Fetch data</a>
+            <a class="nav-link text-dark" [routerLink]='["/pesquisar-produto"]'>Fornecedores</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]'>
+            <a class="nav-link text-dark" [routerLink]='["/pesquisar-produto"]'>Contratos</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]'>
+            <a class="nav-link text-dark" [routerLink]='["/pesquisar-produto"]'>Pagamentos</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]'>
+            <a class="nav-link text-dark" [routerLink]='["/pesquisar-produto"]'>Manutenção</a>
+          </li>
+          <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="!usuarioLogado()">
+            <a class="nav-link text-dark" [routerLink]='["/entrar"]'>Entrar</a>
+          </li>
+          <li class="nav-item dropdown" *ngIf="usuarioLogado()">
+            <a class="nav-link dropdown-toggle text-dark" role="button" aria-haspopup="true" href="#" aria-expanded="false" id="linkMenu" data-toggle="dropdown">{{usuario.nome}}</a>
+            <ul class="dropdown-menu" aria-labelledby="linkMenu">
+              <li class="dropdown-item" role="menu" [routerLink]='["/sair"]' (click)="sair()">Sair</li>
+            </ul>
           </li>
         </ul>
       </div>
