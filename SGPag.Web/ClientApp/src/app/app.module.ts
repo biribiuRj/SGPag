@@ -17,6 +17,7 @@ import { GuardaRotas } from './autorizacao/guarda.rotas';
 import { ServicoArea } from './servicos/area/servico.area';
 import { ServicoFornecedor } from './servicos/fornecedor/servico.fornecedor';
 import { ServicoEmpresa } from './servicos/empresa/servico.empresa';
+import { LoginComponent } from './usuario/login/usuario.login.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { ServicoEmpresa } from './servicos/empresa/servico.empresa';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
+    LoginComponent,
     ManutencaoAreaComponent,
     ManutencaoEstadoComponent,
     ManutencaoEmpresaComponent
@@ -38,6 +40,7 @@ import { ServicoEmpresa } from './servicos/empresa/servico.empresa';
       { path: '', component: HomeComponent, pathMatch: 'full', canActivate: [GuardaRotas] },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'entrar', component: LoginComponent },
       { path: 'manutencao-area', component: ManutencaoAreaComponent },
       { path: 'manutencao-estado', component: ManutencaoEstadoComponent, canActivate: [GuardaRotas] },
       { path: 'manutencao-empresa', component: ManutencaoEmpresaComponent },

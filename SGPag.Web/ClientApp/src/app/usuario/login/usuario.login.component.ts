@@ -3,10 +3,11 @@ import { Usuario } from "../../modelo/Usuario";
 import { Router, Route, ActivatedRoute } from "@angular/router"
 import { ServicoUsuario } from "../../servicos/usuario/servico.usuario";
 
+
 @Component({
   selector: "app-login",
-  templateUrl: "./login.component.html",
-  styleUrls: ["./login.component.css"/*, bla bla.css, bla*/]
+  templateUrl: "./usuario.login.component.html",
+  styleUrls: ["./usuario.login.component.css"/*, bla bla.css, bla*/]
 })
 export class LoginComponent implements OnInit {
   public usuario;
@@ -47,6 +48,5 @@ export class LoginComponent implements OnInit {
       }
 
     );
-  }
-  public titulo = "Imagem padrão do Site";
+   }
 }
