@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Usuario } from "../../modelo/Usuario";
 import { Router, Route, ActivatedRoute } from "@angular/router"
-import { UsuarioServico } from "../../servicos/usuario/servico.usuario";
+import { ServicoUsuario } from "../../servicos/usuario/servico.usuario";
 
 @Component({
   selector: "app-login",
@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   //public usuarios = ["usuario1", "usuario2", "usuario3", "usuario4", "usuario5"]
 
-  constructor(private router: Router, private activetedRouter: ActivatedRoute, private usuarioServico: UsuarioServico) {
+  constructor(private router: Router, private activetedRouter: ActivatedRoute, private usuarioServico: ServicoUsuario) {
   }
   ngOnInit(): void {
     this.returnUrl = this.activetedRouter.snapshot.queryParams['returnUrl'];

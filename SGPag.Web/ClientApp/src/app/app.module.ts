@@ -12,7 +12,11 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ManutencaoAreaComponent } from './area/manutencao/manutencao.area.component';
 import { ManutencaoEstadoComponent } from './estado/manutencao/manutencao.estado.component';
 import { ManutencaoEmpresaComponent } from './empresa/manutencao/manutencao.empresa.component';
-import { UsuarioServico } from './servicos/usuario/servico.usuario';
+import { ServicoUsuario } from './servicos/usuario/servico.usuario';
+import { GuardaRotas } from './autorizacao/guarda.rotas';
+import { ServicoArea } from './servicos/area/servico.area';
+import { ServicoFornecedor } from './servicos/fornecedor/servico.fornecedor';
+import { ServicoEmpresa } from './servicos/empresa/servico.empresa';
 
 
 @NgModule({
@@ -31,15 +35,15 @@ import { UsuarioServico } from './servicos/usuario/servico.usuario';
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: '', component: HomeComponent, pathMatch: 'full', canActivate: [GuardaRotas] },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'manutencao-area', component: ManutencaoAreaComponent },
-      { path: 'manutencao-estado', component: ManutencaoEstadoComponent },
+      { path: 'manutencao-estado', component: ManutencaoEstadoComponent, canActivate: [GuardaRotas] },
       { path: 'manutencao-empresa', component: ManutencaoEmpresaComponent },
     ])
   ],
-  providers: [UsuarioServico],
+  providers: [ServicoUsuario, ServicoArea, ServicoFornecedor, ServicoEmpresa],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

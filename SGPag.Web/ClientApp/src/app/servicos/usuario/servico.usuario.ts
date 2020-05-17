@@ -7,9 +7,9 @@ import { Usuario } from "../../modelo/Usuario";
   providedIn: "root"
 })
 
-export class UsuarioServico {
+export class ServicoUsuario {
 
-  private baseUrl: string;
+  private baseURL: string;
   private _usuario: Usuario;
 
   set usuario(usuario: Usuario) {
@@ -29,15 +29,15 @@ export class UsuarioServico {
     this._usuario = null;
   }
   constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    this.baseUrl = baseUrl;
+    this.baseURL = baseUrl;
   }
   get headers(): HttpHeaders {
     return new HttpHeaders().set('content-type', 'application/json; charset=UTF-8');
   }
   public verificarUsuario(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>(this.baseUrl + "api/usuario/verificarUsuario", JSON.stringify(usuario), { headers: this.headers });
+    return this.http.post<Usuario>(this.baseURL + "api/usuario/verificarUsuario", JSON.stringify(usuario), { headers: this.headers });
   }
   public cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>(this.baseUrl + "api/usuario", JSON.stringify(usuario), { headers: this.headers });
+    return this.http.post<Usuario>(this.baseURL + "api/usuario", JSON.stringify(usuario), { headers: this.headers });
   }
 }
