@@ -52,6 +52,9 @@
     <None Remove="ClientApp\src\app\servicos\empresa\servico.empresa.ts" />
     <None Remove="ClientApp\src\app\servicos\fornecedor\servico.fornecedor.ts" />
     <None Remove="ClientApp\src\app\servicos\usuario\servico.usuario.ts" />
+    <None Remove="ClientApp\src\app\usuario\cadastro\usuario.cadastro.component.css" />
+    <None Remove="ClientApp\src\app\usuario\cadastro\usuario.cadastro.component.html" />
+    <None Remove="ClientApp\src\app\usuario\cadastro\usuario.cadastro.component.ts" />
     <None Remove="ClientApp\src\app\usuario\login\usuario.login.component.css" />
     <None Remove="ClientApp\src\app\usuario\login\usuario.login.component.html" />
     <None Remove="ClientApp\src\app\usuario\login\usuario.login.component.ts" />
@@ -133,6 +136,13 @@
     <TypeScriptCompile Include="ClientApp\src\app\servicos\usuario\servico.usuario.ts">
       <SubType>Code</SubType>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\cadastro\usuario.cadastro.component.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\cadastro\usuario.cadastro.component.css">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\cadastro\usuario.cadastro.component.html" />
     <TypeScriptCompile Include="ClientApp\src\app\usuario\login\usuario.login.component.css">
       <SubType>Code</SubType>
     </TypeScriptCompile>

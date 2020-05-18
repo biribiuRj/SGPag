@@ -40,4 +40,10 @@ export class ServicoUsuario {
   public cadastrarUsuario(usuario: Usuario): Observable<Usuario> {
     return this.http.post<Usuario>(this.baseURL + "api/usuario", JSON.stringify(usuario), { headers: this.headers });
   }
+  public obterTodos(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.baseURL + "api/usuario");
+  }
+  public deletar(usuario: Usuario): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.baseURL + "api/usuario/deletar");
+  }
 }

@@ -13,13 +13,11 @@ namespace SGPag.Web.Controllers
         {
             _usuarioRepositorio = usuarioRepositorio;
         }
-
-        [HttpGet]
-        public ActionResult Get()
+        public IActionResult Get()
         {
             try
             {
-                return Ok();
+                return Json(_usuarioRepositorio.ObterTodos());
             }
             catch (Exception ex)
             {
@@ -53,13 +51,31 @@ namespace SGPag.Web.Controllers
         {
             try
             {
-                var usuarioCadastrado = _usuarioRepositorio.Obter(usuario.Email);
-                if (usuarioCadastrado != null)
+                usuario.Validate();
+                if (!usuario.EhValido)
                 {
-                    return BadRequest("Usuário já cadastrado no Sistema!");
+                    return BadRequest(usuario.ObterMensagensValidação());
+                }
+                if (usuario.Id > 0)
+                {
+                    _usuarioRepositorio.Atualizar(usuario);
                 }
                 _usuarioRepositorio.Adicionar(usuario);
-                return Ok();
+                var mensagemSucesso = "Operação realizada com Sucesso!";
+                return Ok(mensagemSucesso);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.ToString());
+            }
+        }
+        [HttpPost("Deletar")]
+        public IActionResult Deletar([FromBody] Usuario usuario)
+        {
+            try
+            {
+                _usuarioRepositorio.Remover(usuario);
+                return Json(_usuarioRepositorio.ObterTodos());
             }
             catch (Exception ex)
             {

@@ -18,6 +18,8 @@ import { ServicoArea } from './servicos/area/servico.area';
 import { ServicoFornecedor } from './servicos/fornecedor/servico.fornecedor';
 import { ServicoEmpresa } from './servicos/empresa/servico.empresa';
 import { LoginComponent } from './usuario/login/usuario.login.component';
+import { UsuarioManutencaoComponent } from './usuario/manutencao/usuario.manutencao.component';
+import { CadastrarUsuarioComponent } from './usuario/cadastro/usuario.cadastro.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { LoginComponent } from './usuario/login/usuario.login.component';
     CounterComponent,
     FetchDataComponent,
     LoginComponent,
+    UsuarioManutencaoComponent,
+    CadastrarUsuarioComponent,
     ManutencaoAreaComponent,
     ManutencaoEstadoComponent,
     ManutencaoEmpresaComponent
@@ -41,6 +45,13 @@ import { LoginComponent } from './usuario/login/usuario.login.component';
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
       { path: 'entrar', component: LoginComponent },
+      { path: 'cadastrar-usuario', component: CadastrarUsuarioComponent },
+      //{ path: 'cadastrar-area', component: LoginComponent },
+      //{ path: 'cadastrar-estado', component: LoginComponent },
+      //{ path: 'cadastrar-empresa', component: LoginComponent },
+      //{ path: 'cadastrar-fornecedor', component: LoginComponent },
+      //{ path: 'manutencao-fornecedor', component: UsuarioManutencaoComponent },
+      { path: 'manutencao-usuario', component: UsuarioManutencaoComponent },
       { path: 'manutencao-area', component: ManutencaoAreaComponent },
       { path: 'manutencao-estado', component: ManutencaoEstadoComponent, canActivate: [GuardaRotas] },
       { path: 'manutencao-empresa', component: ManutencaoEmpresaComponent },

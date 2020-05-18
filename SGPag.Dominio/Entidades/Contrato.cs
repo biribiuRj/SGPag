@@ -2,7 +2,7 @@
 
 namespace SGPag.Dominio.Entidades
 {
-    public class Contrato
+    public class Contrato : Entidade
     {
         public int Id { get; set; }
         public int FornecedorId { get; set; }
@@ -17,5 +17,9 @@ namespace SGPag.Dominio.Entidades
         public DateTime VigFinal { get; set; }
         public int Objeto { get; set; }
 
+        public override void Validate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

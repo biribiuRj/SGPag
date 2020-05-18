@@ -12,7 +12,7 @@
             <a class="nav-link text-dark" [routerLink]='["/"]'>Home</a>
           </li>
           <li class="nav-item" [routerLinkActive]='["link-active"]'>
-            <a class="nav-link text-dark" [routerLink]='["/pesquisar-produto"]'>Usuários</a>
+            <a class="nav-link text-dark" [routerLink]='["/manutencao-usuario"]'>Usuários</a>
           </li>
           <li class="nav-item" [routerLinkActive]='["link-active"]'>
             <a class="nav-link text-dark" [routerLink]='["/pesquisar-produto"]'>Fornecedores</a>
@@ -26,9 +26,9 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle text-dark" role="button" aria-haspopup="true" href="#" aria-expanded="false" id="linkMenu" data-toggle="dropdown">Manutenção</a>
             <ul class="dropdown-menu" aria-labelledby="linkMenu">
-              <li class="dropdown-item" role="menu" [routerLink]='["/sair"]'>Area</li>
-              <li class="dropdown-item" role="menu" [routerLink]='["/sair"]' >Estado</li>
-              <li class="dropdown-item" role="menu" [routerLink]='["/sair"]' >Empresa</li>
+              <li class="dropdown-item" role="menu" [routerLink]='["/manutencao-area"]'>Area</li>
+              <li class="dropdown-item" role="menu" [routerLink]='["/manutencao-estado"]'>Estado</li>
+              <li class="dropdown-item" role="menu" [routerLink]='["/manutencao-empresa"]'>Empresa</li>
             </ul>
           <li class="nav-item" [routerLinkActive]='["link-active"]' *ngIf="!usuarioLogado()">
             <a class="nav-link text-dark" [routerLink]='["/entrar"]'>Entrar</a>

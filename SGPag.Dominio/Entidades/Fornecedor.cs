@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace SGPag.Dominio.Entidades
 {
-    public class Fornecedor
+    public class Fornecedor : Entidade
     {
         public int Id { get; set; }
         public string NomeSap { get; set; }
@@ -41,5 +41,10 @@ namespace SGPag.Dominio.Entidades
         public string TelefoneFinanceiro2 { get; set; }
         public string EmailFinanceiro2 { get; set; }
         public virtual ICollection<Contrato> Contratos { get; set; }
+
+        public override void Validate()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
