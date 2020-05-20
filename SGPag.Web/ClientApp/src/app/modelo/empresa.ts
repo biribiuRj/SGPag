@@ -3,4 +3,5 @@ export class Empresa {
   empresaCurto: string;
   empresaLongo: string;
   empresaAtivo: number;
+  ativo: number;
 }

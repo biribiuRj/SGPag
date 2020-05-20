@@ -45,12 +45,12 @@ export class CadastrarUsuarioComponent implements OnInit {
         usuarioJson => {
           this.usuarioCadastrado = true;
           this.mensagemSucesso = "";
-          this.router.navigate(['/manutencao-usuario'], { queryParams: this.mensagemSucesso });
+          this.router.navigate(['/manutencao-usuario']);
         },
         e => {
           this.usuarioCadastrado = false;
           this.mensagemErro = e.error;
-          this.router.navigate(['/manutencao-usuario'], { queryParams: this.mensagemErro });
+          this.router.navigate(['/manutencao-usuario']);
         }
       );
   }

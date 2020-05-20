@@ -3,4 +3,5 @@ export class Area {
   areaCurto: string;
   areaLongo: string;
   areaAtivo: string;
+  ativo: number;
 }
