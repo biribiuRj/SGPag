@@ -18,9 +18,11 @@ import { ServicoArea } from './servicos/area/servico.area';
 import { ServicoFornecedor } from './servicos/fornecedor/servico.fornecedor';
 import { ServicoEmpresa } from './servicos/empresa/servico.empresa';
 import { LoginComponent } from './usuario/login/usuario.login.component';
-import { UsuarioManutencaoComponent } from './usuario/manutencao/usuario.manutencao.component';
+import { UsuarioComponent } from './usuario/manutencao/usuario.manutencao.component';
 import { CadastrarUsuarioComponent } from './usuario/cadastro/usuario.cadastro.component';
 import { AreaComponent } from './area/area.component';
+import { EmpresaComponent } from './empresa/empresa.component';
+import { EstadoComponent } from './estado/estado.component';
 
 
 @NgModule({
@@ -31,11 +33,13 @@ import { AreaComponent } from './area/area.component';
     CounterComponent,
     FetchDataComponent,
     LoginComponent,
-    UsuarioManutencaoComponent,
+    UsuarioComponent,
     CadastrarUsuarioComponent,
     ManutencaoAreaComponent,
     ManutencaoEstadoComponent,
     AreaComponent,
+    EstadoComponent,
+    EmpresaComponent,
     ManutencaoEmpresaComponent
   ],
   imports: [
@@ -53,10 +57,10 @@ import { AreaComponent } from './area/area.component';
       //{ path: 'cadastrar-empresa', component: LoginComponent },
       //{ path: 'cadastrar-fornecedor', component: LoginComponent },
       //{ path: 'manutencao-fornecedor', component: UsuarioManutencaoComponent },
-      { path: 'manutencao-usuario', component: UsuarioManutencaoComponent },
+      { path: 'manutencao-usuario', component: UsuarioComponent },
       { path: 'manutencao-area', component: AreaComponent },
-      { path: 'manutencao-estado', component: ManutencaoEstadoComponent, canActivate: [GuardaRotas] },
-      { path: 'manutencao-empresa', component: ManutencaoEmpresaComponent },
+      { path: 'manutencao-estado', component: EstadoComponent, canActivate: [GuardaRotas] },
+      { path: 'manutencao-empresa', component: EmpresaComponent },
     ])
   ],
   providers: [ServicoUsuario, ServicoArea, ServicoFornecedor, ServicoEmpresa],

@@ -33,6 +33,7 @@ namespace SGPag.Web
             services.AddScoped<IAreaRepositorio, AreaRepositorio>();
             services.AddScoped<IContratoRepositorio, ContratoRepositorio>();
             services.AddScoped<IEmpresaRepositorio, EmpresaRepositorio>();
+            services.AddScoped<IEstadoRepositorio, EstadoRepositorio>();
             services.AddScoped<IFornecedorRepositorio, FornecedorRepositorio>();
             services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
 

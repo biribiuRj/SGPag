@@ -11,7 +11,7 @@ import { ServicoUsuario } from "../../servicos/usuario/servico.usuario";
 
 })
 
-export class UsuarioManutencaoComponent implements OnInit {
+export class UsuarioComponent implements OnInit {
 
   public usuarios: Usuario[];
   public usuario: Usuario;

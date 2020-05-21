@@ -1,4 +1,4 @@
-<p *ngIf="!empresa">Carregando Usuários</p>
+<p *ngIf="!empresas">Carregando Empresas</p>
 <div class="alert alert-danger col-md-6" *ngIf="mensagemErro">
   {{mensagemErro}}
 </div>
@@ -20,7 +20,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let e of empresa">
+    <tr *ngFor="let e of empresas">
       <td style="width:60%">{{e.empresaCurto}}</td>
       <td>{{e.empresaLongo}}</td>
       <td style="width:10%">{{e.empresaAtivo}} </td>

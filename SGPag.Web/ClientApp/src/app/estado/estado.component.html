@@ -1,1 +1,29 @@
-﻿
+<p *ngIf="!estados">Carregando Estados</p>
+<div class="alert alert-danger col-md-6" *ngIf="mensagemErro">
+  {{mensagemErro}}
+</div>
+<div class="alert alert-danger col-md-6" *ngIf="mensagemSucesso">
+  {{mensagemSucesso}}
+</div>
+<h1 class="h4 titulo mb-2 ">Pesquisa de Estados</h1>
+
+<button class="btn btn-primary mb-2" (click)="adicionarEstados()">Adicionar Estados</button>
+
+<table class="table table-hover mb-2" ng-If="estados">
+  <thead>
+    <tr>
+      <th>UF</th>
+      <th>Estado</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let e of estados">
+      <td style="width:60%">{{e.uf}}</td>
+      <td>{{e.nomeEstado}}</td>
+      <td><button class="btn btn-success btn-sm" (click)="editarEstado(e)">Editar</button></td>
+      <td><button class="btn btn-danger btn-sm">Deletar</button></td>
+    </tr>
+  </tbody>
+</table>

@@ -50,6 +50,7 @@
     <None Remove="ClientApp\src\app\modelo\usuario.ts" />
     <None Remove="ClientApp\src\app\servicos\area\servico.area.ts" />
     <None Remove="ClientApp\src\app\servicos\empresa\servico.empresa.ts" />
+    <None Remove="ClientApp\src\app\servicos\estado\servico.estado.ts" />
     <None Remove="ClientApp\src\app\servicos\fornecedor\servico.fornecedor.ts" />
     <None Remove="ClientApp\src\app\servicos\usuario\servico.usuario.ts" />
     <None Remove="ClientApp\src\app\usuario\cadastro\usuario.cadastro.component.css" />
@@ -132,6 +133,9 @@
     </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\servicos\area\servico.area.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\servicos\empresa\servico.empresa.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\servicos\estado\servico.estado.ts">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="ClientApp\src\app\servicos\fornecedor\servico.fornecedor.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\servicos\usuario\servico.usuario.ts">
       <SubType>Code</SubType>

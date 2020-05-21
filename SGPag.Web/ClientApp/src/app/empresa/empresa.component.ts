@@ -3,7 +3,6 @@ import { Router } from "@angular/router"
 import { Empresa } from "../modelo/empresa";
 import { ServicoEmpresa } from "../servicos/empresa/servico.empresa";
 
-
 @Component({
   selector: "app-manutencao-empresa",
   templateUrl: "./empresa.component.html",
@@ -38,7 +37,7 @@ export class EmpresaComponent implements OnInit {
     return this.router.navigate(['/cadastrar-empresa']);
   }
 
-  public deletarArea(empresa: Empresa) {
+  public deletarEmpresa(empresa: Empresa) {
     var retorno = confirm("Deseja realmente deletar a Empresa?");
     if (retorno == true) {
       this.ServicoEmpresa.deletarEmpresa(empresa).subscribe(
@@ -50,7 +49,7 @@ export class EmpresaComponent implements OnInit {
         });
     }
   }
-  public editarArea(empresa: Empresa) {
+  public editarEmpresa(empresa: Empresa) {
     sessionStorage.setItem('empresaSession', JSON.stringify(empresa));
     this.router.navigate(['/cadastrar-empresa']);
   }
