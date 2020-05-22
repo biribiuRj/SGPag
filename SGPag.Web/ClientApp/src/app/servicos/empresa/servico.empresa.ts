@@ -23,7 +23,4 @@ export class ServicoEmpresa {
   public obterTodos(): Observable<Empresa[]> {
     return this.http.get<Empresa[]>(this.baseURL + "api/empresa");
   }
-  public deletarEmpresa(empresa: Empresa): Observable<Empresa[]> {
-    return this.http.get<Empresa[]>(this.baseURL + "api/empresa/deletar");
-  }
 }

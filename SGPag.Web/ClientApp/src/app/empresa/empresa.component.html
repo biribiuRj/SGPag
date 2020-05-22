@@ -16,16 +16,14 @@
       <th>Empresa Longo</th>
       <th>Empresa Ativo</th>
       <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let e of empresas">
       <td style="width:60%">{{e.empresaCurto}}</td>
       <td>{{e.empresaLongo}}</td>
-      <td style="width:10%">{{e.empresaAtivo}} </td>
+      <td style="width:10%"> {{e.empresaAtivo == 1 ? 'ATIVO' : 'INATIVO'}} </td>
       <td><button class="btn btn-success btn-sm" (click)="editarempresa(e)">Editar</button></td>
-      <td><button class="btn btn-danger btn-sm">Deletar</button></td>
     </tr>
   </tbody>
 </table>

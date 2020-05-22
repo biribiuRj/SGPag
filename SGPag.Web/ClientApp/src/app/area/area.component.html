@@ -16,16 +16,14 @@
       <th>Area Longo</th>
       <th>Area Ativo</th>
       <th></th>
-      <th></th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let a of areas">
       <td style="width:60%">{{a.areaCurto}}</td>
       <td>{{a.areaLongo}}</td>
-      <td style="width:10%">{{a.areaAtivo}} </td>
+      <td style="width:10%">{{a.areaAtivo == 1 ? 'ATIVO' : 'INATIVO'}}</td>
       <td><button class="btn btn-success btn-sm" (click)="editarUsuario(a)">Editar</button></td>
-      <td><button class="btn btn-danger btn-sm">Deletar</button></td>
     </tr>
   </tbody>
 </table>

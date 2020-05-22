@@ -37,18 +37,6 @@ export class EmpresaComponent implements OnInit {
     return this.router.navigate(['/cadastrar-empresa']);
   }
 
-  public deletarEmpresa(empresa: Empresa) {
-    var retorno = confirm("Deseja realmente deletar a Empresa?");
-    if (retorno == true) {
-      this.ServicoEmpresa.deletarEmpresa(empresa).subscribe(
-        empresas => {
-          this.empresas = empresas;
-        },
-        e => {
-
-        });
-    }
-  }
   public editarEmpresa(empresa: Empresa) {
     sessionStorage.setItem('empresaSession', JSON.stringify(empresa));
     this.router.navigate(['/cadastrar-empresa']);

@@ -1,1 +1,29 @@
-﻿
+<p *ngIf="!fornecedores">Carregando Fornecedores</p>
+<div class="alert alert-danger col-md-6" *ngIf="mensagemErro">
+  {{mensagemErro}}
+</div>
+<div class="alert alert-danger col-md-6" *ngIf="mensagemSucesso">
+  {{mensagemSucesso}}
+</div>
+<h1 class="h4 titulo mb-2 ">Pesquisa de Fornecedores</h1>
+
+<button class="btn btn-primary mb-2" (click)="adicionarFornecedores()">Adicionar Fornecedores</button>
+
+<table class="table table-hover mb-2" ng-If="areas">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Código SAP</th>
+      <th>Ativo</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of fornecedores">
+      <td style="width:60%">{{f.nomeSap}}</td>
+      <td>{{a.CodSap}}</td>
+      <td style="width:10%">{{a.ativo == 1 ? 'ATIVO' : 'INATIVO'}}</td>
+      <td><button class="btn btn-success btn-sm" (click)="editarUsuario(a)">Editar</button></td>
+    </tr>
+  </tbody>
+</table>
