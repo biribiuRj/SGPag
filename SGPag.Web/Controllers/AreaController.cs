@@ -37,7 +37,13 @@ namespace SGPag.Web.Controllers
         {
             try
             {
+
+                if (area.Id > 0)
+                {
+                    _areaRepositorio.Atualizar(area);
+                }
                 _areaRepositorio.Adicionar(area);
+
                 return Created("api/area",area);
             }
             catch(Exception ex)

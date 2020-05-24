@@ -1,0 +1,42 @@
+<div class="text-center">
+  <form class="form-signin">
+    <h1 class="h4 titulo">Cadastro de Empresas</h1>
+    <label for="inputEmpresaCurto" class="sr-only">Empresa Curto</label>
+    <input type="text" id="inputEmpresaCurto" name="empresaCurtoEmpresa" placeholder="Nome da Empresa Curto" class="form-control mb-2"
+           [ngClass]="{
+           'is-invalid':empresaCurto.invalid && (empresaCurto.dirty || empresaCurto.touched),
+           'is-valid':empresaCurto.valid && (empresaCurto.dirty || empresaCurto.touched)
+           }" [(ngModel)]="empresa.empresaCurto" #empresaCurto="ngModel" required />
+    <div class="invalid-feedback mb-2" *ngIf="empresaCurto.invalid && (empresaCurto.dirty || empresaCurto.touched)">
+      <div *ngIf="empresaCurto.errors.required">
+        Digite o nome da Empresa Curta
+      </div>
+    </div>
+    <label for="inputEmpresaLongo" class="sr-only">Empresa Longo</label>
+    <input type="text" id="inputEmpresaLongo" name="empresaLongoEmpresa" placeholder="Digite a Empresa Longa" class="form-control mb-2"
+           [ngClass]="{
+           'is-invalid':empresaLongo.invalid && (empresaLongo.dirty || empresaLongo.touched),
+           'is-valid':empresaLongo.valid && (empresaLongo.dirty || empresaLongo.touched)
+           }" [(ngModel)]="empresa.empresaLongo" #empresaLongo="ngModel" required />
+    <div class="invalid-feedback mb-2" *ngIf="empresaLongo.invalid && (empresaLongo.dirty || empresaLongo.touched)">
+      <div *ngIf="empresaLongo.errors.required">
+        Digite o nome da Empresa Longa
+      </div>
+    </div>
+    <label for="inputEmpresaAtivo" class="sr-only">Empresa Ativo</label>
+    <select class="form-control mb-2" required name="empresaLongo" [(ngModel)]="empresa.empresaAtivo" #empresaAtivo="ngModel">
+      <option value="0">Inativo</option>
+      <option value="1">Ativo</option>
+    </select>
+    <div class="form-inline">
+      <button class="btn btn-primary" style="margin-right:4px" (click)="cadastrar()" [disabled]="ativar_spinner">
+        <span class="spinner-border spinner-border-sm" *ngIf="ativar_spinner"></span>
+        Cadastrar
+      </button>
+      <button class="btn btn-secondary" (click)="voltar()">Cancelar</button>
+    </div>
+    <div class="alert alert-danger col-md-6" *ngIf="mensagemErro">
+      {{mensagemErro}}
+    </div>
+  </form>
+</div>

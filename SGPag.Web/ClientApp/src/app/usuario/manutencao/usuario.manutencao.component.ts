@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit} from "@angular/core";
 import { Router } from "@angular/router"
 import { Usuario } from "../../modelo/usuario";
 import { ServicoUsuario } from "../../servicos/usuario/servico.usuario";
@@ -16,11 +16,12 @@ export class UsuarioComponent implements OnInit {
   public usuarios: Usuario[];
   public usuario: Usuario;
   public ativar_spinner: boolean;
-  public mensagem: string;
+  public mensagemSucesso: string;
   public usuarioCadastrado: boolean;
 
-  ngOnInit(): void {
 
+  ngOnInit(): void {
+    
   }
 
   constructor(private servicoUsuario: ServicoUsuario, private router: Router) {
@@ -32,6 +33,7 @@ export class UsuarioComponent implements OnInit {
         console.log(e.error);
       }
     )
+
   }
 
   public adicionarUsuario() {

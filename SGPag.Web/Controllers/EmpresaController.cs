@@ -37,10 +37,14 @@ namespace SGPag.Web.Controllers
         {
             try
             {
+                if (empresa.Id > 0)
+                {
+                    _empresaRepositorio.Atualizar(empresa);
+                }
                 _empresaRepositorio.Adicionar(empresa);
                 return Created("api/area", empresa);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return BadRequest(ex.ToString());
             }

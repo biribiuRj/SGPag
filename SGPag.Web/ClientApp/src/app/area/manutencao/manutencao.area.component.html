@@ -1,0 +1,42 @@
+<div class="text-center">
+  <form class="form-signin">
+    <h1 class="h4 titulo">Cadastro de Áreas</h1>
+    <label for="inputAreaCurto" class="sr-only">Area Curto</label>
+    <input type="text" id="inputAreaCurto" name="areaCurtoArea" placeholder="Nome da Área Curto" class="form-control mb-2"
+           [ngClass]="{
+           'is-invalid':areaCurto.invalid && (areaCurto.dirty || areaCurto.touched),
+           'is-valid':areaCurto.valid && (areaCurto.dirty || areaCurto.touched)
+           }" [(ngModel)]="area.areaCurto" #areaCurto="ngModel" required />
+    <div class="invalid-feedback mb-2" *ngIf="areaCurto.invalid && (areaCurto.dirty || areaCurto.touched)">
+      <div *ngIf="areaCurto.errors.required">
+        Digite a Área Curto
+      </div>
+    </div>
+    <label for="inputAreaCurto" class="sr-only">Área Longo</label>
+    <input type="text" id="inputAreaLongo" name="areaLongoArea" placeholder="Digite a Área Longa" class="form-control mb-2"
+           [ngClass]="{
+           'is-invalid':areaLongo.invalid && (areaLongo.dirty || areaLongo.touched),
+           'is-valid':areaLongo.valid && (areaLongo.dirty || areaLongo.touched)
+           }" [(ngModel)]="area.areaLongo" #areaLongo="ngModel" required />
+    <div class="invalid-feedback mb-2" *ngIf="areaLongo.invalid && (areaLongo.dirty || areaLongo.touched)">
+      <div *ngIf="areaLongo.errors.required">
+        Digite a Área Longa
+      </div>
+    </div>
+    <label for="inputAreaAtivo" class="sr-only">Area Ativo</label>
+    <select class="form-control mb-2" required  name="areaLongo" [(ngModel)]="area.areaAtivo" #areaAtivo="ngModel">
+      <option value="0">Inativo</option>
+      <option value="1">Ativo</option>
+    </select>
+    <div class="form-inline">
+      <button class="btn btn-primary" style="margin-right:4px" (click)="cadastrar()" [disabled]="ativar_spinner">
+        <span class="spinner-border spinner-border-sm" *ngIf="ativar_spinner"></span>
+        Cadastrar
+      </button>
+      <button class="btn btn-secondary" (click)="voltar()">Cancelar</button>
+    </div>
+    <div class="alert alert-danger col-md-6" *ngIf="mensagemErro">
+      {{mensagemErro}}
+    </div>
+  </form>
+</div>
